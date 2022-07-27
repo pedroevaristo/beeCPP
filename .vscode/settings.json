@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 {
     "files.associations": {
         "ostream": "cpp",
         "iomanip": "cpp"
     }
+=======
+{
+    "files.associations": {
+        "ostream": "cpp"
+    }
+>>>>>>> 183fa95c2235ea30f27fd0f1e14ec68961f900f6
 }
