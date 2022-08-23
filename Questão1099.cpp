@@ -66,7 +66,9 @@ int main()
         /*if (count >= 2)
         {
             cout<<"dentro do count: "<<repeat<<endl; TO tentnado de todas as formas possiveis com cin>> 3 e 8 e fica dando erro de logica 
-            
+
+possivel solução: http://muitomaiscodigoss.blogspot.com/2018/10/uri-problema-1099-soma-de-impares.html
+
         }*/
         else
         {
