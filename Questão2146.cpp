@@ -22,4 +22,4 @@ int main()
         array[0] = 0;
         loop += 1;
     } while (loop > 1);
-}
+} 
