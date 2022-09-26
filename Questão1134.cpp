@@ -1,19 +1,44 @@
 #include <iostream>
 #include <cstdlib>
-/*
-Um Posto de combustíveis deseja determinar
-qual de seus produtos tem a preferência de seus clientes.
-Escreva um algoritmo para ler o tipo de combustível abastecido
-(codificado da seguinte forma: 1.Álcool 2.Gasolina 3.Diesel 4.Fim).
-Caso o usuário informe um código inválido (fora da faixa de 1 a 4)
-deve ser solicitado um novo código (até que seja válido).
-O programa será encerrado quando o código informado for o número 4.*/
 using namespace std;
-
+int function(int choice);
 int main()
 {
-    int loop = 0;
-    while (inf == 4)
-    {       
+    int choice, atribute;
+    atribute = 0;
+
+    do
+    {
+        cout << "escolha quais dos numeros abaixo para realizar uma pesquisa sobre combustiveis: \n1. Alcool;\n2. gasolina;\n3. Diesel;\n4. finalizar; " << endl;
+        atribute = 0;
+        cin >> choice;
+
+        while (choice > 4)
+        {
+
+            cout << "digite novamente, nao existe essa opcao: \n";
+            cin >> choice;
+        }
+        // função
+        function(choice);
+    } while (choice != 4);
+}
+
+// funções
+int function(int choice)
+{
+    int count1 = 0, count2 =0, count3 =0;
+    switch (choice)
+    {
+    case 1:
+        count1+=1;
+        break;
+
+    case 2:
+        count2+=1;
+        break;
+    case 3:
+        count3+=1;
+        break;
     }
 }
