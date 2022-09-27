@@ -2,6 +2,9 @@
 #include <cstdlib>
 using namespace std;
 int function(int choice);
+
+int count1 = 0, count2 = 0, count3 = 0;
+
 int main()
 {
     int choice, atribute;
@@ -20,25 +23,29 @@ int main()
             cin >> choice;
         }
         // função
-        function(choice);
+        int receivenumbers = function(choice);
+    
     } while (choice != 4);
+
+    cout<<"MUITO OBRIGADO"<<endl;
+    cout<<" - Alcool: "<<count1<<endl;
+    cout<<" - Gasolina: "<<count2<<endl;
+    cout<<" - Diesel: "<<count3<<endl;
 }
 
 // funções
 int function(int choice)
 {
-    int count1 = 0, count2 =0, count3 =0;
     switch (choice)
     {
     case 1:
-        count1+=1;
+        return count1 += 1;
         break;
-
     case 2:
-        count2+=1;
+        return count2 += 1;
         break;
     case 3:
-        count3+=1;
+        return count3 += 1;
         break;
     }
 }
