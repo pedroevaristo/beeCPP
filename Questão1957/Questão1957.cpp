@@ -4,7 +4,7 @@
 void scanNumber(int receiveNumber);
 int clearArrayBase(int arrayBase[], int *sum);
 using namespace std;
-
+//fazer com tad é melhor
 int main()
 {
     int receiveNumber;
@@ -42,6 +42,16 @@ int main()
                  << arrayBase[sum] << endl;
             sum += 1;
         }
+        int auxliar = 0;
+        for(int orderDecrease = 0 ;orderDecrease <sum; orderDecrease++ ){
+            auxliar = orderDecrease[sum];
+            orderDecrease[sum] = orderDecrease[sum];
+            orderDecrease[sum] = auxliar;
+        }
+        do{
+
+        }while();
+       
        
     }
     // colocar aqui a função de limpar o array
