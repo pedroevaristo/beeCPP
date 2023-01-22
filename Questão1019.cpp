@@ -10,7 +10,7 @@ int main() // praticar fazer main e as funções
     int n, hour, min, sec, sectotal;
     cin >> n;
 
-    hour = n / 60;
+    hour = n / 3600;
     sec = n % 3600;// 60 min == 3600 seg
     min = sec / 60;
     sectotal = sec % 60;
