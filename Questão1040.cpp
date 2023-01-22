@@ -4,6 +4,8 @@
 
 using namespace std;
 
+void conditionsGrades(float resultExam);
+
 int main()
 {
     float numbersExam[4];
@@ -17,17 +19,10 @@ int main()
         cin >> loopLearnerExams[numbersExam];
     }
 
-    /* for (int lopp = 0; lopp < 4; lopp++)
-     {
-         cout << numbersExam[lopp] << endl;
-     }*/
-
     float totalAccumulated = 0;
     float totalResultStudent = 0;
     int totalGradeWeighted = 0;
     int loopWhile = 0;
-
-    // totalResultStudent = ((2*)+(3*)+(4*)+(1*)/4);
 
     while (loopWhile < 4)
     {
@@ -37,6 +32,36 @@ int main()
         totalGradeWeighted += gradesWeighted[loopWhile];
         loopWhile++;
     }
-    cout << totalResultStudent / totalGradeWeighted << endl;
+    conditionsGrades(totalResultStudent / totalGradeWeighted);
 }
-//falta pegar o numeros totais e colocar em condições e entre elas, colocar 
+
+float newGrade = 0, newResultExam = 0;
+
+void conditionsGrades(float resultExam)
+{
+
+    if (resultExam >= 7.0)
+    {
+        cout << "Aluno Aprovado" << endl;
+    }
+    if (resultExam < 7.0 && resultExam >= 5)
+    {
+        cout << "Aluno em Exame" << endl;
+        cout << "Digite novamente a nota:\n";
+        cin >> newGrade;
+
+        resultExam =(resultExam + newGrade)/2;
+
+        if (resultExam >= 5.0)
+        {
+            cout<<"Aprovado \n Media final: "<<resultExam<<endl;
+        }
+        else{
+            cout<<"Reprovado \n Media final: "<<resultExam<<endl;
+        }
+    }
+    else
+    {
+        cout<<"Reprovado "<<resultExam<<endl;
+    }
+}
