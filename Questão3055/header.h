@@ -1,16 +1,23 @@
-struct Aluno
+struct Student
 {
-    int age;
+    char shift[50];
     char name[50];
 
     /*------------*/
 
-    float nota;
+    float grade;
     float media;
 };
 
-struct pilha
+struct information
 {
     int dados;
-    struct pilha *proximo;
+    struct information *next;
 };
+
+struct Stack{
+    Stack *beginng;
+    Stack *final;
+};
+
+Stack *createStack();
