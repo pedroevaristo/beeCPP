@@ -23,7 +23,6 @@ int main()
 
 
 
-
    stack = createStack();
     
     do
@@ -47,7 +46,7 @@ int main()
 
             cin>>pointer.shift;
             
-
+           aux = push(stack, pointer);
 
 
             break;

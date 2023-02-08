@@ -5,8 +5,9 @@ struct Student
 
     /*------------*/
 
-    float grade;
-    float media;
+    int grade;
+    int media;
+
 };
 
 struct information
@@ -21,3 +22,5 @@ struct Stack{
 };
 
 Stack *createStack();
+
+int push(Stack *stack, Student pointer);
