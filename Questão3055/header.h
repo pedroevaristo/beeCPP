@@ -10,15 +10,15 @@ struct Student
 
 };
 
-struct information
+struct Slots
 {
-    int dados;
-    struct information *next;
+    Student dados;
+    Slots *next;
 };
 
 struct Stack{
-    Stack *beginng;
-    Stack *final;
+    Slots *beginng;
+    Slots *final;
 };
 
 Stack *createStack();

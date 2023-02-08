@@ -22,16 +22,19 @@ int main()
     int aux = 0;
 
 
-
    stack = createStack();
     
     do
     {
+
         cout << "Digite entre as opcoes: 1. colocar as informações do aluno\n 2. Tirar a nota de um aluno \n 3. Imprimir as informacoes \n 4. limpar a memória e sair" << endl;
         cin >> choice;
 
         switch (choice)
         {
+             fflush(stdin);
+
+
         case 1:
             cout << "Student's name: " << endl;
             cin.getline(pointer.name, 50);

@@ -22,16 +22,29 @@ Stack *createStack()
     return stack;
 }
 
-int push(Stack *stack, Student pointer){
-
-    information *push = (information *)malloc(sizeof(information));
-
-    if(push == NULL){
+int push(Stack *stack, Student pointer)
+{
+    if (stack == NULL)
+    {
         return 0;
     }
-    else {
+    else
+    {
+        Slots *push = (Slots *)malloc(sizeof(Slots));
+        if (push == NULL)
+        {
+            return 0;
+        }
         push->dados = pointer;
         push->next = NULL;
-
+        if (stack->final == NULL)
+        {
+            stack->beginng = push;
+        }
+        else{
+            stack->final->next = push;
+        }
+        stack->final = push;
+        return 1;
     }
 }
