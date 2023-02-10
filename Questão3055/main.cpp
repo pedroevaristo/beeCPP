@@ -27,7 +27,7 @@ int main()
     do
     {
 
-        cout << "Digite entre as opcoes: 1. colocar as informações do aluno\n 2. Tirar a nota de um aluno \n 3. Imprimir as informacoes \n 4. limpar a memória e sair" << endl;
+        cout << "Digite entre as opcoes:\n 1. colocar as informações do aluno\n 2. Tirar a nota de um aluno \n 3. Imprimir as informacoes \n 4. limpar a memória e sair" << endl;
         cin >> choice;
 
         switch (choice)
@@ -47,15 +47,19 @@ int main()
 
             cout<<"What's shift of him/her?"<<endl;
 
-            cin>>pointer.shift;
+            cin.getline(pointer.shift, 50);
             
-           aux = push(stack, pointer);
+            push(stack, pointer);
 
 
             break;
+            
         case 2:
+            removeOnePush(stack);
+
             break;
         case 3:
+            showTheStack(stack);
             break;
         case 4:
             break;

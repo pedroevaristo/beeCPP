@@ -17,10 +17,17 @@ struct Slots
 };
 
 struct Stack{
-    Slots *beginng;
-    Slots *final;
+    Slots *top;
+    Slots *principle;
 };
 
 Stack *createStack();
 
 int push(Stack *stack, Student pointer);
+
+void removeOnePush(Stack *stack);
+
+int lengthStack(Stack *stack);
+
+void showTheStack(Stack *stack);
+
