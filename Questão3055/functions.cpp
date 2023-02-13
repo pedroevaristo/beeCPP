@@ -12,8 +12,8 @@ Stack *createStack()
 
     if (stack != NULL)
     {
+        stack->begin = NULL;
         stack->top = NULL;
-        stack->principle = NULL;
     }
     else
     {
@@ -21,7 +21,6 @@ Stack *createStack()
     }
     return stack;
 }
-
 
 int push(Stack *stack, Student pointer)
 {
@@ -36,17 +35,17 @@ int push(Stack *stack, Student pointer)
         {
             return 0;
         }
-        push->dados = pointer;
+        push->data = pointer;
         push->next = NULL;
-        if (stack->principle == NULL)
+        if (stack->top == NULL)
         {
-            stack->top = push;
+            stack->begin = push;
         }
         else
         {
-            stack->principle->next = push;
+            stack->top->next = push;
         }
-        stack->principle = push;
+        stack->top = push;
         return 1;
     }
 }
@@ -60,24 +59,26 @@ void removeOnePush(Stack *stack)
 
     length = lengthStack(stack);
 
-    if(length == 1){
-        free(stack->top);
-        stack->top =NULL;
-        stack->principle = NULL;
-
+    if (length == 1)
+    {
+        free(stack->begin);
+        stack->begin = NULL;
+        stack->top = NULL;
     }
-    else if(length >= 2){
+    else if (length >= 2)
+    {
 
-        Slots *remove = stack->top;
+        Slots *remove = stack->begin;
 
-        while(remove->next->next == NULL){
+        while (remove->next->next != NULL)
+        {
+
             remove = remove->next;
         }
 
         free(remove->next);
         remove->next = NULL;
-        stack->principle = remove;
-
+        stack->top = remove;
     }
 }
 
@@ -92,11 +93,11 @@ int lengthStack(Stack *stack)
     else
     {
         int countStack = 0;
-        Slots *length = stack->top;
+        Slots *length = stack->begin;
 
         while (length != NULL)
         {
-            countStack+=1;
+            countStack += 1;
 
             length = length->next;
         }
@@ -106,8 +107,59 @@ int lengthStack(Stack *stack)
 
 /*----------*/
 
-void showTheStack(Stack *stack){
+void showTheStack(Stack *stack)
+{
+    system("cls");
+    if (statusStack(stack))
+    {
 
+        cout << "Stack is empty" << endl;
+    }
+    else
+    {
+        int count = 0;
 
+        Slots *status = stack->begin;
+        while (status != NULL)
+        {
+            cout << "position: " << count + 1 << " stack" << endl;
 
+            cout << "name: " << status->data.name << endl;
+
+            cout << "Grade: " <<status->data.shift << endl;
+            status = status->next;
+
+            count+=1;
+
+        }
+    }
 }
+
+int statusStack(Stack *stack)
+{
+    if (stack == NULL || stack->begin == NULL)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+/*-------------*/
+
+ void clearStackAndExit(Stack *stack){
+    if(stack != NULL){
+        Slots *exclude;
+
+        while(stack->begin != NULL){
+            exclude = stack->begin;
+
+            stack->begin = stack->begin->next;
+            free(exclude);
+
+        }
+        free(stack);
+    }
+ }

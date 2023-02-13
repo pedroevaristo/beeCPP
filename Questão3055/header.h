@@ -12,13 +12,13 @@ struct Student
 
 struct Slots
 {
-    Student dados;
+    Student data;
     Slots *next;
 };
 
 struct Stack{
+    Slots *begin;
     Slots *top;
-    Slots *principle;
 };
 
 Stack *createStack();
@@ -30,4 +30,7 @@ void removeOnePush(Stack *stack);
 int lengthStack(Stack *stack);
 
 void showTheStack(Stack *stack);
+int statusStack(Stack *stack);
+
+ void clearStackAndExit(Stack *stack);
 

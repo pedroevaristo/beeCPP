@@ -62,6 +62,7 @@ int main()
             showTheStack(stack);
             break;
         case 4:
+            clearStackAndExit(stack);
             break;
         }
     } while (choice != 0);
