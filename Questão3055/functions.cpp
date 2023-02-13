@@ -17,7 +17,7 @@ Stack *createStack()
     }
     else
     {
-        cout << "Erro ao criar a Pilha" << endl;
+        cout << "Error creating a stack!" << endl;
     }
     return stack;
 }
@@ -52,6 +52,17 @@ int push(Stack *stack, Student pointer)
 
 /*--------------*/
 
+void calculateTheGrades(Stack *stack, Student pointer)
+{
+    Slots *calculate = stack->top;
+
+    /* while (calculate->next != NULL)
+     {*/
+    calculate->data.grade2 = (pointer.grade1 + pointer.average) / 2;
+    
+}
+/*------------*/
+
 void removeOnePush(Stack *stack)
 {
 
@@ -72,7 +83,6 @@ void removeOnePush(Stack *stack)
 
         while (remove->next->next != NULL)
         {
-
             remove = remove->next;
         }
 
@@ -87,7 +97,7 @@ int lengthStack(Stack *stack)
 {
     if (stack == NULL)
     {
-        cout << "stack is empty" << endl;
+        cout << "Stack is empty" << endl;
         return 0;
     }
     else
@@ -122,15 +132,25 @@ void showTheStack(Stack *stack)
         Slots *status = stack->begin;
         while (status != NULL)
         {
+            cout<<"\n";
             cout << "position: " << count + 1 << " stack" << endl;
 
             cout << "name: " << status->data.name << endl;
 
-            cout << "Grade: " <<status->data.shift << endl;
+            cout << "The student's grade 1 : " << status->data.grade1 << endl;
+
+            cout<<"The student's average exam: "<< status->data.average<<endl;
+
+            cout<<"The student's grade 2: "<< status->data.grade2 <<endl;
+
+            if(status->data.grade2 >= 50){
+                cout<<"Student approved"<<endl;
+            }else{
+                cout<<"Student reproved"<<endl;
+            }
             status = status->next;
 
-            count+=1;
-
+            count += 1;
         }
     }
 }
@@ -149,17 +169,21 @@ int statusStack(Stack *stack)
 
 /*-------------*/
 
- void clearStackAndExit(Stack *stack){
-    if(stack != NULL){
+void clearStackAndExit(Stack *stack)
+{
+    if (stack != NULL)
+    {
         Slots *exclude;
 
-        while(stack->begin != NULL){
+        while (stack->begin != NULL)
+        {
             exclude = stack->begin;
 
             stack->begin = stack->begin->next;
             free(exclude);
-
         }
         free(stack);
+        system("cls");
+        exit(0);
     }
- }
+}

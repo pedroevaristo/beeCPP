@@ -2,12 +2,13 @@ struct Student
 {
     char shift[50];
     char name[50];
+    char statusGrade[20];
 
     /*------------*/
 
-    int grade;
-    int media;
-
+    int grade1;
+    int average;
+    int grade2;
 };
 
 struct Slots
@@ -32,5 +33,7 @@ int lengthStack(Stack *stack);
 void showTheStack(Stack *stack);
 int statusStack(Stack *stack);
 
- void clearStackAndExit(Stack *stack);
+void clearStackAndExit(Stack *stack);
+
+void calculateTheGrades(Stack *stack, Student pointer);
 
