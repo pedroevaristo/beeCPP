@@ -54,12 +54,18 @@ int push(Stack *stack, Student pointer)
 
 void calculateTheGrades(Stack *stack, Student pointer)
 {
+    int resultaCaltulate = 0, result = 0;
     Slots *calculate = stack->top;
 
-    /* while (calculate->next != NULL)
-     {*/
-    calculate->data.grade2 = (pointer.grade1 + pointer.average) / 2;
+    // calculate->data.grade2 = (pointer.grade1 + pointer.average) / 2;
+
+    resultaCaltulate = ((pointer.average * 2) - pointer.grade1);
     
+    cout<<resultaCaltulate<<endl;
+
+    calculate->data.grade2 = resultaCaltulate;
+
+    cout<<calculate->data.grade2<<endl;
 }
 /*------------*/
 
@@ -132,21 +138,24 @@ void showTheStack(Stack *stack)
         Slots *status = stack->begin;
         while (status != NULL)
         {
-            cout<<"\n";
+            cout << "\n";
             cout << "position: " << count + 1 << " stack" << endl;
 
             cout << "name: " << status->data.name << endl;
 
             cout << "The student's grade 1 : " << status->data.grade1 << endl;
 
-            cout<<"The student's average exam: "<< status->data.average<<endl;
+            cout << "The student's average exam: " << status->data.average << endl;
 
-            cout<<"The student's grade 2: "<< status->data.grade2 <<endl;
+            cout << "The student's grade 2: " << status->data.grade2 << endl;
 
-            if(status->data.grade2 >= 50){
-                cout<<"Student approved"<<endl;
-            }else{
-                cout<<"Student reproved"<<endl;
+            if (status->data.average > 50)
+            {
+                cout << "Student approved" << endl;
+            }
+            else
+            {
+                cout << "Student reproved" << endl;
             }
             status = status->next;
 

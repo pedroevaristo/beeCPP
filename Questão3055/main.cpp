@@ -1,8 +1,6 @@
 #include <iostream>
 #include <cstdlib>
 #include <cstring>
-#include <istream>
-
 
 #include "header.h"
 
@@ -20,7 +18,6 @@ int main()
     Student pointer;
     Stack *stack;
     int choice;
-    int aux = 0;
 
 
    stack = createStack();
@@ -34,7 +31,7 @@ int main()
         switch (choice)
         {
             
-            fflush(stdin);
+            //fflush(stdin);
         case 1:
             cout << "Student's name: " << endl;
             cin.getline(pointer.name, 50);
@@ -47,7 +44,7 @@ int main()
 
             cout<<"What's the shift of student ?"<<endl;
 
-            cin.getline(pointer.shift, 50);
+           // cin.getline(pointer.shift, 50);
             
             push(stack, pointer);
             calculateTheGrades(stack, pointer);
