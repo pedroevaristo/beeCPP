@@ -29,21 +29,21 @@ int main()
         switch (choice)
         {
 
-            // fflush(stdin);
         case 1:
+            fflush(stdin); // isso tem que estar dentro do case ou qualquer caso for colocar
             cout << "Student's name: " << endl;
-            
-            cin>>pointer.name;
+
+            cin.getline(pointer.name, 50);
 
             cout << "Student's first exam:" << endl;
-            cin >> pointer.grade1;
+            cin >> pointer.grade1; // aqui toda vez que teno usar getline, ele passa direto para o proximo.
 
             cout << "Student's averege total: " << endl;
             cin >> pointer.average;
-
+            
+            fflush(stdin);
             cout << "What's the shift of student ?" << endl;
-
-            cin>>pointer.shift;
+            cin.getline(pointer.shift, 20);
 
             push(stack, pointer);
             calculateTheGrades(stack, pointer);

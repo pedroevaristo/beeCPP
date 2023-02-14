@@ -2,6 +2,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <cstring>
+#include <string>
 
 using namespace std;
 
@@ -60,12 +61,12 @@ void calculateTheGrades(Stack *stack, Student pointer)
     // calculate->data.grade2 = (pointer.grade1 + pointer.average) / 2;
 
     resultaCaltulate = ((pointer.average * 2) - pointer.grade1);
-    
-    cout<<resultaCaltulate<<endl;
+
+   // cout << resultaCaltulate << endl;
 
     calculate->data.grade2 = resultaCaltulate;
 
-    cout<<calculate->data.grade2<<endl;
+    //cout << calculate->data.grade2 << endl;
 }
 /*------------*/
 
@@ -142,7 +143,7 @@ void showTheStack(Stack *stack)
             cout << "position: " << count + 1 << " stack" << endl;
 
             cout << "Name: " << status->data.name << endl;
-            
+
             cout << "Shift: " << status->data.shift << endl;
 
             cout << "The student's grade 1 : " << status->data.grade1 << endl;
