@@ -1,8 +1,8 @@
+#include "header.h"
 #include <iostream>
 #include <cstdlib>
 #include <cstring>
 
-#include "header.h"
 using namespace std;
 
 Stack *createStack()
@@ -141,7 +141,9 @@ void showTheStack(Stack *stack)
             cout << "\n";
             cout << "position: " << count + 1 << " stack" << endl;
 
-            cout << "name: " << status->data.name << endl;
+            cout << "Name: " << status->data.name << endl;
+            
+            cout << "Shift: " << status->data.shift << endl;
 
             cout << "The student's grade 1 : " << status->data.grade1 << endl;
 

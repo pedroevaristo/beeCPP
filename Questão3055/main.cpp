@@ -1,13 +1,12 @@
+#include "header.h"
 #include <iostream>
 #include <cstdlib>
 #include <cstring>
 
-#include "header.h"
-
 using namespace std;
 
 int main()
-{ 
+{
     /*
     empilhar
     desimpilhar
@@ -19,9 +18,8 @@ int main()
     Stack *stack;
     int choice;
 
+    stack = createStack();
 
-   stack = createStack();
-    
     do
     {
 
@@ -30,11 +28,12 @@ int main()
 
         switch (choice)
         {
-            
-            //fflush(stdin);
+
+            // fflush(stdin);
         case 1:
             cout << "Student's name: " << endl;
-            cin.getline(pointer.name, 50);
+            
+            cin>>pointer.name;
 
             cout << "Student's first exam:" << endl;
             cin >> pointer.grade1;
@@ -42,15 +41,15 @@ int main()
             cout << "Student's averege total: " << endl;
             cin >> pointer.average;
 
-            cout<<"What's the shift of student ?"<<endl;
+            cout << "What's the shift of student ?" << endl;
 
-           // cin.getline(pointer.shift, 50);
-            
+            cin>>pointer.shift;
+
             push(stack, pointer);
             calculateTheGrades(stack, pointer);
 
             break;
-            
+
         case 2:
             removeOnePush(stack);
 

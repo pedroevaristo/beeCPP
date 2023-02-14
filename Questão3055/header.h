@@ -1,7 +1,7 @@
 struct Student
 {
     char shift[50];
-    string name[50];
+    char name[50];
     char statusGrade[20];
 
     /*------------*/
