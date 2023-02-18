@@ -1,15 +1,17 @@
 #include <iostream>
 #include <cstdlib>
 #include <cstring>
-#include <cmath>
+
 #include "head.h"
 using namespace std;
 
 /*Tenho que saber usar struct para armazenar as informações e mostrar-las*/
 int main()
 {
-  
-    /* 
+    
+
+}
+   /*int count = 0;
     do
     {
         cin >> p.Numbers[count];
@@ -20,4 +22,3 @@ int main()
     for(int c = 0;c < 3; c++){
         cout<<p.Numbers[c]<<endl;
     }*/
-}

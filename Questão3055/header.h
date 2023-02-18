@@ -13,7 +13,7 @@ struct Student
 
 struct Slots
 {
-    Student data;
+    Student data;//Struct aninhadas
     Slots *next;
 };
 
