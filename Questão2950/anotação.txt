@@ -1,0 +1,28 @@
+/*Tenho que saber usar struct para armazenar as informações e mostrar-las*/
+
+
+
+int count = 0;
+    do
+    {
+        cin >> p.Numbers[count];
+        count++;
+
+    } while (count < 3);
+
+    for(int c = 0;c < 3; c++){
+        cout<<p.Numbers[c]<<endl;
+    }*/
+    
+    /*
+T =(x+y) --> 100 dividido por T
+
+2
+2
+100
+1878003872
+-1
+1988062781
+1
+6422352
+

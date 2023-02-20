@@ -1,36 +1,13 @@
-#include <iostream>
-#include <cstdlib>
-#include <cstring>
+#include<iostream>
+#include <iomanip>
+#include<cstdlib>
 
 #include "head.h"
-
 using namespace std;
 
-void creteSpace(){
+void calculation(head head, int num){
     
-
-
+     head.result =(float) head.numbers[2] / (float)(head.numbers[0] + head.numbers[1]);
+    
+    cout<< setprecision(4) <<"Resultado: "<<head.result<<endl;
 }
-
-
-void calculation(head numbers[])
-{
-   
-}
-
-/*
-T =(x+y) --> 100 dividido por T
-
-2
-2
-100
-1878003872
--1
-1988062781
-1
-6422352
-
-
-
-
-*/

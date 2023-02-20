@@ -1,19 +1,6 @@
 struct head{
-    int numbers[3];
-    float pi = 3.141592;
-    float result;
-    int *point;
-};
-struct infor{
-    head data;
-    infor *next;
-};
-struct data{
-    infor *begin;
-    infor *top;
+ int numbers[3];
+ float result;
 };
 
-
-void creteSpace();
-
-void calculation();
+void calculation(head head, int num);

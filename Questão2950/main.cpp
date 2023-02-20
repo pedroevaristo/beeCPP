@@ -1,24 +1,22 @@
-#include <iostream>
-#include <cstdlib>
-#include <cstring>
+#include<iostream>
+#include<cstdlib>
 
 #include "head.h"
 using namespace std;
 
-/*Tenho que saber usar struct para armazenar as informações e mostrar-las*/
-int main()
-{
-    
+int main(){
+
+    /*
+    loop e colocar vetores, mas eu quero colcoar no formato de tad e que tenha o struct
+    */
+head head;
+int count = 0;
+   do{
+    cin>>head.numbers[count];
+    count+=1;
+
+   }while(count < 3);
+   calculation(head, 3);
+
 
 }
-   /*int count = 0;
-    do
-    {
-        cin >> p.Numbers[count];
-        count++;
-
-    } while (count < 3);
-
-    for(int c = 0;c < 3; c++){
-        cout<<p.Numbers[c]<<endl;
-    }*/
