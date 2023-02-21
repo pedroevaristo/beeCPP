@@ -3,4 +3,4 @@ struct head{
  float result;
 };
 
-void calculation(head head, int num);
+void calculation(head head, int num);//nunca esqueça de colocar essas informações para serem passadas pela função
