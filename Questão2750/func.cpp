@@ -10,42 +10,41 @@ using namespace std;
 int aux = 0;
 int octallPrint(headInformation main, int loop)
 {
-    if(main.octalStore[loop] > 0){
-        
-    
-    
-    
-    if (aux == 8)
+    if (main.octalStore[loop] > 0)
     {
-        
 
-        // cout<<main.octalStore[loop]<<endl;
-        return main.octalStore[loop] += 2;
-    }
-    aux += 1;
+        if (aux == 7)
+        {
+            return main.octalStore[loop] += 2;
+        }
+        aux += 1;
     }
 }
 
-int hexadecimalPrint(headInformation main, int loop){
-    switch (main.hexadecimalStore[loop])
+void hexadecimalPrint(headInformation main, int loop)
+{
+
+    switch (loop)
     {
-    case 10 :
-        return main.hexadecimalStoreLetters[loop] = "A";
-        break;
-    
-    case 11:
-        break;
-    
-    case 12:
-        break;
-    
-    case 13:
-        break;
-    
-    case 14:
+
+    case 10:
+        cout << 'A';
         break;
 
+    case 11:
+        cout <<'B';
+        break;
+    case 12:
+        cout << 'C';
+        break;
+    case 13:
+        cout << 'D';
+        break;
+    case 14:
+        cout << 'E';
+        break;
     case 15:
+        cout << 'F';
         break;
     }
 }

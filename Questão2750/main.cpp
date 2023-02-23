@@ -1,7 +1,8 @@
 #include <iostream>
 #include <iomanip>
 #include <cstdlib>
-//#include <cstring>
+#include <stdlib.h>
+// #include <cstring>
 
 #include "head.h"
 
@@ -16,29 +17,30 @@ int main()
     int loop = 0;
     // cin>> main.decimalStore[loop];
     do
-    {
-        main.decimalStore[loop] = loop;
-        main.octalStore[loop] = loop;
+     {
+         main.decimalStore[loop] = loop;
+         main.octalStore[loop] = loop;
         main.hexadecimalStore[loop] = loop;
 
         main.octalStore[loop] = octallPrint(main, loop);
-        if (main.hexadecimalStore[loop] >= 10)
-        {
-            main.hexadecimalStoreLetters[loop] = hexadecimalPrint(main, loop);
-            
+
+        
+
+        cout <<"|  "<<main.decimalStore[loop] << "    |   " << main.octalStore[loop] << "   |    " ;
+        if(main.hexadecimalStore[loop] <= 9){
+            cout<< main.hexadecimalStore[loop] << "    |" << endl;
         }
-        main.hexadecimalStore[loop] = hexadecimalPrint(main, loop);
+        else
+        {
 
-         
+           hexadecimalPrint(main, loop);
+            cout <<"   |" << endl;
 
-        cout << main.decimalStore[loop] << " | " << main.octalStore[loop] << " |" << main.hexadecimalStore[loop]
-             << " | " << endl;
+        }
 
         loop += 1;
 
     } while (loop < 16);
 
-    // decimal();
-    // octal();
-    // hexadecimal();
+  
 }
